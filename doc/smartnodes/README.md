@@ -109,11 +109,11 @@ Get Litoreum wallet / daemon and bootstrap:
 ```bash
 mkdir -p ltrm_latest
 cd ltrm_latest
-wget https://github.com/Raptor3um/litoreum/releases/download/1.3.17.01/litoreum-ubuntu20-1.3.17.01.tar.gz
-tar -xvf litoreum-ubuntu20-1.3.17.01.tar.gz
+wget https://github.com/Altcoin-Master/Litoreum/releases/download/1.0.0.01/litoreum-linux-1.0.0.01.zip
+tar -xvf litoreum-linux-1.0.0.01.zip
 mkdir ~/.litoreumcore && touch ~/.litoreumcore/litoreum.conf
 echo "daemon=1" >> ~/.litoreumcore/litoreum.conf
-~/ltrm_latest/litoreum-ubuntu20-1.3.17.01/./litoreumd
+~/ltrm_latest/litoreum-linux-1.0.0.01/./litoreumd
 echo all done!
 ```
 
@@ -144,9 +144,16 @@ walletpassphrase password time (in seconds)
 dumpprivkey "address" (address is the receiving address you sent the 1 million LTRM to)
 ```
 
-- Send 1 million LTRM to self (this is current collateral amount)
+- Send 600,000 LTRM to self (this is the minimum collateral amount)
 - Wait for 2 confirmations
-
+- Smartnodes rules:
+   0 - 88720         600,000 LTRM
+   88721 - 132720    800,000 LTRM
+   132721 - 176720   1,000,000 LTRM
+   176721 - 220720   1,250,000 LTRM
+   220721 - 264720   1,500,000 LTRM
+   264721 - forever  1,800,000 LTRM
+   
 :::note
 
 The private key only allows you to restore the matching receiving address. If you setup multiple nodes you should dump the private key for each collateral receiving address.
