@@ -1,4 +1,4 @@
-Litoreum Core version 1.13.17.00
+Litoreum Core version 1.0.0.01
 ==========================
 
 Release is now available from:
