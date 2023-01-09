@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Litoreum Core
+Comment=Litoreum P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Litoreum peer-to-peer Netzwerk
+Comment[fr]=Litoreum, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Litoreum, eşten eşe kriptografik sanal para birimi
+Exec=litoreum-qt %u
+Terminal=false
+Type=Application
+Icon=litoreum128
+MimeType=x-scheme-handler/litoreum;
+Categories=Office;Finance;

@@ -1,4 +1,4 @@
-Litoreum Core Latest v1.0.0.01
+Litoreum Core Latest v1.13.17.01
 ===========================
 
 |CI|master|develop|
