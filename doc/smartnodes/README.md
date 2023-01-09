@@ -147,13 +147,15 @@ dumpprivkey "address" (address is the receiving address you sent the 1 million L
 - Send 600,000 LTRM to self (this is the minimum collateral amount)
 - Wait for 2 confirmations
 - Smartnodes rules:
+```
    0 - 88720         600,000 LTRM
    88721 - 132720    800,000 LTRM
    132721 - 176720   1,000,000 LTRM
    176721 - 220720   1,250,000 LTRM
    220721 - 264720   1,500,000 LTRM
    264721 - forever  1,800,000 LTRM
-   
+```
+
 :::note
 
 The private key only allows you to restore the matching receiving address. If you setup multiple nodes you should dump the private key for each collateral receiving address.
