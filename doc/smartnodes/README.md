@@ -1,10 +1,3 @@
----
-pagination_previous: smartnodes/requirements
-pagination_next: wallet/bootstrap
----
-
-import ReactPlayer from 'react-player';
-
 # Manual Setup
 
 :::note
@@ -118,11 +111,7 @@ mkdir -p ltrm_latest
 cd ltrm_latest
 wget https://github.com/Raptor3um/litoreum/releases/download/1.3.17.01/litoreum-ubuntu20-1.3.17.01.tar.gz
 tar -xvf litoreum-ubuntu20-1.3.17.01.tar.gz
-cd ..
-wget https://bootstrap.litoreum.com/bootstraps_for_v1.3.17.00/bootstrap.zip
-unzip bootstrap.zip
 mkdir ~/.litoreumcore && touch ~/.litoreumcore/litoreum.conf
-cp -R blocks chainstate evodb llmq ~/.litoreumcore
 echo "daemon=1" >> ~/.litoreumcore/litoreum.conf
 ~/ltrm_latest/litoreum-ubuntu20-1.3.17.01/./litoreumd
 echo all done!
@@ -143,25 +132,6 @@ This part of the guide is to get your local wallet or control wallet setup. If y
 :::
 
 ### 1. Install and Sync Local Wallet:
-
-For this step, you will need the LitoreumCore wallet installed. 
-
-Follow our [LitoreumCore Wallet](docs/wallet/) guides for detailed instructions on how to do this.
-
-To speed up the synchronization, use our POWCache or Bootstrap packages: [Using Powcache & Bootstrap](docs/wallet/bootstrap)
-
-Grab bootstrap from github release and unpack in the above directory (highly recommended as reduces sync time drastically)
-
-:::note
-
-If you already have a Litoreum wallet remove the following folders before using the bootstrap (make sure wallet is closed before using bootstrap)
-blocks
-chainstate
-evodb
-llmq
-To use the bootstrap <code>right click > unzip</code>. Copy contents to the new directory you created above.
-
-:::
 
 - Start wallet and let it finish syncing.
 - Encrypt wallet (Settings > Encrypt Wallet)
@@ -209,7 +179,7 @@ The structure from left to right is:
 
 :::info
 
-Enter the protx quick_setup command in Debug console. This will create a .conf file for that node in the same directory you ran the wallet from. Open it and copy the contents. <u>[See this part in the video guide.](https://youtu.be/55ot-iT2GFc?t=1196)</u>
+Enter the protx quick_setup command in Debug console. This will create a .conf file for that node in the same directory you ran the wallet from. Open it and copy the contents.
 
 :::
 
@@ -235,13 +205,3 @@ When this is done, wait a couple minutes until running `~/./litoreum-cli smartno
 :::success Success!
 Your Smartnode should now be running!
 :::
-
-## Video guides
-
-<ReactPlayer
-  playing
-  controls
-  url="https://www.youtube.com/watch?v=55ot-iT2GFc"
-  playing={false}
-/>
-<sub>Video Guide - credit @dk808</sub>
