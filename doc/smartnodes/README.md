@@ -109,11 +109,11 @@ Get Litoreum wallet / daemon and bootstrap:
 ```bash
 mkdir -p ltrm_latest
 cd ltrm_latest
-wget https://github.com/Altcoin-Master/Litoreum/releases/download/1.0.0.01/litoreum-linux-1.0.0.01.zip
-tar -xvf litoreum-linux-1.0.0.01.zip
+wget https://github.com/Altcoin-Master/Litoreum/releases/download/v1.0.1.01/litoreum-linux-1.0.1.01.zip
+unzip litoreum-linux-1.0.1.01.zip -d litoreum-linux-1.0.1.01
 mkdir ~/.litoreumcore && touch ~/.litoreumcore/litoreum.conf
 echo "daemon=1" >> ~/.litoreumcore/litoreum.conf
-~/ltrm_latest/litoreum-linux-1.0.0.01/./litoreumd
+~/ltrm_latest/litoreum-linux-1.0.1.01/./litoreumd
 echo all done!
 ```
 
