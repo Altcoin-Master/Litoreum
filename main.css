@@ -1,0 +1,70 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1;background-image:linear-gradient(45deg,rgb(20,222,124) 0%,rgb(20,222,124) 21%,rgb(25,190,119) 21%,rgb(25,190,119) 37%,rgb(30,158,113) 37%,rgb(30,158,113) 46%,rgb(35,126,108) 46%,rgb(35,126,108) 53%,rgb(39,94,103) 53%,rgb(39,94,103) 59%,rgb(44,62,97) 59%,rgb(44,62,97) 77%,rgb(49,30,92) 77%,rgb(49,30,92) 100%);background-size:cover;background-attachment:fixed}
+ol,ul{list-style:none}
+a{text-decoration:none;color:#fff}
+a:hover{color:#7b0f19;-o-transition:.5s;-ms-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s}
+h1,h2,h3,h4,h5,h5{margin-top:1.0em;margin-bottom:.5em;font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;font-weight:lighter;color:#333;-webkit-font-smoothing:antialiased}
+h1{margin-top:0;font-size:2.5em;line-height:1.2em;letter-spacing:.05em}
+p{margin-bottom:1.3em;line-height:1.7em}
+strong{font-weight:bold}
+em{font-style:italic}
+blockquote{padding:10px 20px;margin:0 0 20px;font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;font-weight:lighter;font-size:1em;border-left:3px solid #BF1827}
+blockquote p:last-child{margin-bottom:0}
+ol,ul{margin:0 0 1.3em 2.5em}
+ol li,ul li{margin:0 0 .2em 0;line-height:1.6em}
+ol ol,ol ul,ul ol,ul ul{margin:.1em 0 .2em 2em}
+.intro{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;font-size:1.2em;font-weight:lighter;color:#999}
+.block-heading{display:inline;float:left;width:940px;margin:0 10px;position:relative;bottom:-15px;font-size:.8em;font-weight:bold;text-align:center;text-transform:uppercase;letter-spacing:1px}
+.label{position:relative;display:inline-block;padding:8px 18px 9px 18px;background:#BF1827;border-radius:3px;text-align:center;color:#FFF}
+hr{border:none}
+.panel{display:table;width:100%;height:100%}
+.panel_vertical{display:table-cell;vertical-align:middle}
+.panel-title{margin:0 0 5px 0;font-size:2.5em;letter-spacing:4px;color:#FFF}
+.panel-subtitle{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;font-size:1.2em;font-weight:lighter;letter-spacing:3px;color:#ccc;-webkit-font-smoothing:antialiased}
+.panel-cover{display:block;z-index:900;width:100%;max-width:none;height:100%}
+.panel-cover--collapsed{width:30%;max-width:700px}
+.panel-cover--overlay{display:block;position:absolute;z-index:0;top:0;right:0;bottom:0;left:0;background-color:rgba(68,68,68,0.6);background-image:-webkit-linear-gradient(-10deg,rgba(68,68,68,0.6) 20%,rgba(0,0,0,0.9));background-image:linear-gradient(140deg,rgba(68,68,68,0.6) 20%,rgba(0,0,0,0.9))}
+.panel-cover_logo{margin-bottom:.2em}
+.panel-cover_divider{width:50%;margin:20px auto;border-top:1px solid rgba(255,255,255,0.14)}
+.panel-cover_divider--secondary{width:15%}
+.main{display:table;width:100%;height:100%}
+.main_inner{display:table-cell;vertical-align:middle;position:relative;z-index:800;padding:0 60px}
+.main_content{width:760px;margin:0 auto;margin-top:100px;margin-bottom: 100px;}
+.main_content--fixed{width:480px;transition:width 1s;-webkit-transition:width 1s}
+.panel-inverted{font-weight:100;text-align:center;color:#FFF;text-shadow:0 1px 1px rgba(0,0,0,0.4)}
+.panel-inverted a{font-size:26px;font-weight:600}
+.btn,.navigation_item a{padding:10px 20px;border:1px solid #BF1827;border-radius:20px;font-size:.9em;font-weight:bold;letter-spacing:1px;text-shadow:none;color:#BF1827;-webkit-font-smoothing:antialiased}
+.btn:hover,.navigation_item a:hover{color:#7b0f19;border-color:#7b0f19}
+.btn-border-small{border:1px solid #BF1827;border-radius:20px;padding:6px 8px;font-size:.8em;margin-left:10px}
+.btn-secondary{border-color:#5BA4E5;color:#5BA4E5}
+.btn-secondary:hover{color:#217fd2;border-color:#217fd2}
+.btn-tertiary{border-color:#999;color:#999}
+.btn-tertiary:hover{color:#737373;border-color:#737373}
+.btn-large{padding:10px 24px;font-size:1.1em}
+.btn-small{padding:8px 12px;font-size:.7em}
+.btn-mobile-menu{display:none;position:fixed;z-index:9999;top:0;right:0;left:0;width:100%;height:35px;background:rgba(51,51,51,0.98);border-bottom:1px solid rgba(255,255,255,0.1);text-align:center}
+.btn-mobile-menu_icon,.btn-mobile-close_icon{position:relative;top:10px;color:#FFF}
+nav{display:inline-block;position:relative}
+.navigation{display:inline-block;float:left;position:relative;margin:0;list-style-type:none}
+.navigation_item{display:inline-block;margin:5px 1px 0 0;line-height:1em}
+.navigation_item a{display:block;position:relative;border-color:#FFF;color:#FFF;opacity:.8}
+.navigation_item a:hover{color:#000;border-color:#000;opacity:1}
+.navigation--social a{border:0px;padding:6px 8px 6px 9px}
+.navigation--social a .label{display:none}
+.navigation--social a .icon{display:block;font-size:1.7em}
+.pagination{display:block;margin:0 0 4em 0}
+.pagination_page-number{margin:0;font-size:.8em;color:#999}
+.pagination_newer{margin-right:1em}
+.pagination_older{margin-left:1em}
+.cover_bg{margin:20px 0 20px 0;opacity:0.5;filter:alpha(opacity=30);background-color:#000;padding:10px;border:5px solid #fff;border-radius:5px}
+.psa{width:50%;margin:0 auto;text-align:left}
+.psa a{font-size:14px;color:yellowgreen;font-weight:100}
+.psa a:hover{color:red}
+.psb{width:60%;margin:0 auto;text-align:left}
+.psb a{font-size:16px;color:yellowgreen;font-weight:100}
+.psb a:hover{color:red}
+.psc{width:80%;margin:0 auto;text-align:left}
+.psc a{font-size:16px;color:yellowgreen;font-weight:100}
+.psc a:hover{color:red}
+.psd{width:100%;margin:0 auto;text-align:left}
