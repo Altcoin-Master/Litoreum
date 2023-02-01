@@ -544,7 +544,7 @@ public:
         //consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000c2a6d13d4138"); // 0
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000"); // 0
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x1c31a0b889b0551eb9e3c674f1e8db8ae6cf028929f29f13e5d4f460674236e8"); // 0
+        consensus.defaultAssumeValid = uint256S("0x3bc214311083db103f57076fe7ef2473dce0fc345b3546de3fec87090b351fcd"); // 0
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -567,7 +567,6 @@ public:
         vSeeds.emplace_back("seed02.litoreum.org");
         vSeeds.emplace_back("seed03.litoreum.org");
 
-
         // Litoreum addresses start with 'L'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,48);
         // Litoreum script addresses start with '7'
@@ -587,13 +586,24 @@ public:
 //        }
         std::vector<FounderRewardStructure> rewardStructures = {  {INT_MAX, 5} };// 5% founder/dev fee forever
         consensus.nFounderPayment = FounderPayment(rewardStructures, 250);
-        consensus.nCollaterals = SmartnodeCollaterals(
+/*         consensus.nCollaterals = SmartnodeCollaterals(
           { {88720, 600000 * COIN},
             {132720, 800000 * COIN},
             {176720, 1000000 * COIN},
             {220720, 1250000 * COIN},
             {264720, 1500000 * COIN},
             {INT_MAX, 1800000 * COIN}
+          },
+          { {5761, 0}, {INT_MAX, 20} }
+        ); */
+		
+        consensus.nCollaterals = SmartnodeCollaterals(
+          { {20000, 100000 * COIN},
+            {100000, 200000 * COIN},
+            {200000, 400000 * COIN},
+            {300000, 600000 * COIN},
+            {400000, 800000 * COIN},
+            {INT_MAX, 1000000 * COIN}
           },
           { {5761, 0}, {INT_MAX, 20} }
         );
@@ -632,12 +642,13 @@ public:
         checkpointData = {
           {  {0, uint256S("0xe1d8c6c97a39c6af5216a86696b6498e21957fbeccd25d8bad8ec90457071800")},
 		     {6000, uint256S("0x1c31a0b889b0551eb9e3c674f1e8db8ae6cf028929f29f13e5d4f460674236e8")},
+		     {16000, uint256S("0xf50a04ad1a1f08d0304d5dde2eeb25cb6c62c4579d36e4a2a902c7d8d3c27d8c")},
           }
         };
 
         chainTxData = ChainTxData{
-            1674005253,//1672502400,   // * UNIX timestamp of last known number of transactions (Block 0)
-            13249,   // * total number of transactions between genesis and that timestamp
+            1675217344,//1672502400,   // * UNIX timestamp of last known number of transactions (Block 0)
+            35510,   // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.01    // * estimated number of transactions per second after that timestamp
         };

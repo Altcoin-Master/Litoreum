@@ -109,11 +109,11 @@ Get Litoreum wallet / daemon and bootstrap:
 ```bash
 mkdir -p ltrm_latest
 cd ltrm_latest
-wget https://github.com/Altcoin-Master/Litoreum/releases/download/v1.0.1.01/litoreum-linux-1.0.1.01.zip
-unzip litoreum-linux-1.0.1.01.zip
+wget https://github.com/Altcoin-Master/Litoreum/releases/download/v1.1.0.0/litoreum-linux-1.1.0.0.zip
+unzip litoreum-linux-1.1.0.0.zip
 mkdir ~/.litoreumcore && touch ~/.litoreumcore/litoreum.conf
 echo "daemon=1" >> ~/.litoreumcore/litoreum.conf
-~/ltrm_latest/litoreum-linux-1.0.1.01/./litoreumd
+~/ltrm_latest/litoreum-linux-1.1.0.0/./litoreumd
 echo all done!
 ```
 
@@ -141,19 +141,19 @@ This part of the guide is to get your local wallet or control wallet setup. If y
 
 ```
 walletpassphrase password time (in seconds)
-dumpprivkey "address" (address is the receiving address you sent the 1 million LTRM to)
+dumpprivkey "address" (address is the receiving address you sent the 100k LTRM to)
 ```
 
-- Send 600,000 LTRM to self (this is the minimum collateral amount)
+- Send 100,000 LTRM to self (this is the minimum collateral amount)
 - Wait for 2 confirmations
 - Smartnodes rules:
 ```
-   0 - 88720         600,000 LTRM
-   88721 - 132720    800,000 LTRM
-   132721 - 176720   1,000,000 LTRM
-   176721 - 220720   1,250,000 LTRM
-   220721 - 264720   1,500,000 LTRM
-   264721 - forever  1,800,000 LTRM
+        0 - 20000     100,000 LTRM
+    20001 - 100000    200,000 LTRM
+   100001 - 200000    400,000 LTRM
+   200001 - 300000    600,000 LTRM
+   300001 - 400000    800,000 LTRM
+   400001 - forever   1,000,000 LTRM
 ```
 
 :::note
@@ -167,7 +167,7 @@ The private key only allows you to restore the matching receiving address. If yo
 Here is an example protx quick_setup command:
 
 ```bash
-protx quick_setup "c4bbcde9771668fa640c263d4b964f688b0f039f7b684e715d92e4012369fea6" "1" "194.113.73.87:21001" "RFbWv94ZfueciwVVpHLMdqFayaXAS4sBxP"
+protx quick_setup "c4bbcde9771668fa640c263d4b964f688b0f039f7b684e715d92e4012369fea6" "1" "127.0.0.1:21001" "LFbWv94ZfueciwVVpHLMdqFayaXAS4sBxP"
 ```
 
 The structure from left to right is:
