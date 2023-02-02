@@ -69,45 +69,6 @@
 							</p>
 						</div>
 						<div class="cover_bg" id="div2" style="display:none;">
-<hr class="panel-cover_divider">
-<span>Smartnodes Revenue Calculator</span><br><br>
-<table>
-	<tr>
-	<td><span>number of nodes&nbsp</span></td>
-	<td><input type="number" id="num1" value="154"><br><br></td>
-	</tr>
-	<tr>
-	<td></td>
-	<td><button class="calculate" onclick="Calculate()">Calculate</button><br><br></td>
-	<tr>
-	</tr>
-    <td><span>7 Day&nbsp</span></td>
-	<td><input type="text" id="d" value="" readonly="true"><br><br></td>
-	</tr>
-	<tr>
-    <td><span>30 Day&nbsp</span></td>
-	<td><input type="text" id="m" value="" readonly="true"><br><br></td>
-	</tr>
-	<tr>
-    <td><span>365 Day&nbsp</span></td>
-	<td><input type="text" id="y" value="" readonly="true"><br><br></td>
-	</tr>
-</table>
-<hr class="panel-cover_divider">
-							<p class="psc">
-								● Smartnodes need to lock some LTRM in your wallet to get rewards, which is different from general network nodes.At the same time, we have not enabled PoS Ban at present. Generally speaking, when your node is disconnected, you will not be able to get rewards. Yes, we have not enabled this verification mechanism, which means that you do not need to purchase an expensive VPS for configuration. You only need to lock LTRM in your wallet to get rewards. In the future, the node rewards of LTRM will be enough to cover the VPS fee , we will enable it.
-								<br>
-								<br>
-								● Now you can skip the VPS configuration directly and set up a virtual node.
-								<br>
-								<a href="https://github.com/Altcoin-Master/Litoreum/tree/main/doc/smartnodes#local-wallet-setup" target="_blank">https://github.com/Altcoin-Master/Litoreum/tree/main/doc/smartnodes#local-wallet-setup</a>
-								<br>
-								<br>
-								● But I still hope that people with idle VPS can build a real node according to the following steps and open port 21001, all of which are voluntary.
-								<br>
-								<a href="https://github.com/Altcoin-Master/Litoreum/tree/main/doc/smartnodes" target="_blank">https://github.com/Altcoin-Master/Litoreum/tree/main/doc/smartnodes</a>
-								<br>
-							</p>
 						</div>
 						<div class="cover_bg" id="div3" style="display:none;">
 							<p class="psd">
@@ -182,20 +143,5 @@
 				</div>
 			</div>
 		</header>
-    <script>
-		function Calculate(){
-			var Nnodes = parseFloat(document.getElementById('num1').value);
-			//var Nnodes = 200;
-			var Dtotal = 720*1000;
-			var amount = 100000;
-			var d = (Math.round(Dtotal/Nnodes*7/amount*100)).toFixed(1)+'%';
-			var m = (Math.round(Dtotal/Nnodes*30/amount*100)).toFixed(1)+'%';
-			var y = (Math.round(Dtotal/Nnodes*365/amount*100)).toFixed(1)+'%';
-			document.getElementById("d").value=d;
-			document.getElementById("m").value=m;
-			document.getElementById("y").value=y;
-		  }
-	Calculate();
-	</script>
 	</body>
 </html>
