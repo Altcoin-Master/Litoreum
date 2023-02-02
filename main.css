@@ -2,6 +2,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 body{line-height:1;background-image:linear-gradient(45deg,rgb(20,222,124) 0%,rgb(20,222,124) 21%,rgb(25,190,119) 21%,rgb(25,190,119) 37%,rgb(30,158,113) 37%,rgb(30,158,113) 46%,rgb(35,126,108) 46%,rgb(35,126,108) 53%,rgb(39,94,103) 53%,rgb(39,94,103) 59%,rgb(44,62,97) 59%,rgb(44,62,97) 77%,rgb(49,30,92) 77%,rgb(49,30,92) 100%);background-size:cover;background-attachment:fixed}
 ol,ul{list-style:none}
+table{margin:0px auto}
 a{text-decoration:none;color:#fff}
 a:hover{color:#7b0f19;-o-transition:.5s;-ms-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s}
 h1,h2,h3,h4,h5,h5{margin-top:1.0em;margin-bottom:.5em;font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;font-weight:lighter;color:#333;-webkit-font-smoothing:antialiased}
@@ -68,3 +69,34 @@ nav{display:inline-block;position:relative}
 .psc a{font-size:16px;color:yellowgreen;font-weight:100}
 .psc a:hover{color:red}
 .psd{width:100%;margin:0 auto;text-align:left}
+.calculate{
+  line-height:30px;
+  height:30px;
+  color:#ffffff;
+  background-color:#3ba354;
+  font-size:16px;
+  font-weight:normal;
+  font-family:Arial;
+  border:0px solid #dcdcdc;
+  -webkit-border-top-left-radius:3px;
+  -moz-border-radius-topleft:3px;
+  border-top-left-radius:3px;
+  -webkit-border-top-right-radius:3px;
+  -moz-border-radius-topright:3px;
+  border-top-right-radius:3px;
+  -webkit-border-bottom-left-radius:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-bottom-left-radius:3px;
+  -webkit-border-bottom-right-radius:3px;
+  -moz-border-radius-bottomright:3px;
+  border-bottom-right-radius:3px;
+  -moz-box-shadow: inset 0px 0px 0px 0px #ffffff;
+  -webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
+  box-shadow: inset 0px 0px 0px 0px #ffffff;
+  text-align:center;
+  display:inline-block;
+  text-decoration:none;
+}
+.calculate:hover{
+  background-color:#1c9439;
+}
