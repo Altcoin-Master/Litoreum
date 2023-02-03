@@ -74,12 +74,16 @@
 <table>
 	<tr>
 	<td><span>number of nodes&nbsp</span></td>
-	<td><input type="number" id="num1" value="154"><br><br></td>
+	<td><input type="number" id="num1" value="200"><br><br></td>
 	</tr>
 	<tr>
 	<td></td>
 	<td><button class="calculate" onclick="Calculate()">Calculate</button><br><br></td>
 	<tr>
+	</tr>
+	<tr>
+	<td><span>Current Locked Quantity&nbsp</span></td>
+	<td><input type="number" id="num2" value="100000"><br><br></td>
 	</tr>
     <td><span>7 Day&nbsp</span></td>
 	<td><input type="text" id="d" value="" readonly="true"><br><br></td>
@@ -187,7 +191,8 @@
 			var Nnodes = parseFloat(document.getElementById('num1').value);
 			//var Nnodes = 200;
 			var Dtotal = 720*1000;
-			var amount = 100000;
+			var amount = parseFloat(document.getElementById('num2').value);
+			//var amount = 100000;
 			var d = (Math.round(Dtotal/Nnodes*7/amount*100)).toFixed(1)+'%';
 			var m = (Math.round(Dtotal/Nnodes*30/amount*100)).toFixed(1)+'%';
 			var y = (Math.round(Dtotal/Nnodes*365/amount*100)).toFixed(1)+'%';
