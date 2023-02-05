@@ -95,8 +95,17 @@ fi
 
 ## Increase Smartnode Collateral
 
-As the litoreum network matures Smartnode collateral ramps up and you will need to recreate your Smartnode in order to increase the collateral amount. Here are the steps needed:
-
+As the litoreum network matures Smartnode collateral ramps up and you will need to recreate your Smartnode in order to increase the collateral amount. 
+- Smartnodes rules:
+```
+        0 - 20000     100,000 LTRM
+    20001 - 100000    200,000 LTRM
+   100001 - 200000    400,000 LTRM
+   200001 - 300000    600,000 LTRM
+   300001 - 400000    800,000 LTRM
+   400001 - forever   1,000,000 LTRM
+```
+- Here are the steps needed:
 - In your local wallet that holds the Smartnode collateral go to Send > Inputs. If you do not see the "Inputs" button you must enable coin control. `Settings > Options > Wallet > Enable coin control features`.
 
 You will see there your Smartnode collateral and it will be marked with a lock. We need to unlock it, so mark the box for that input and click the "toggle lock state" button to unlock it. That input is now spendable and your Smartnode is deactivated.
