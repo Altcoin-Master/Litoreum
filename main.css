@@ -59,7 +59,7 @@ nav{display:inline-block;position:relative}
 .pagination_newer{margin-right:1em}
 .pagination_older{margin-left:1em}
 .cover_bg{margin:20px 0 20px 0;opacity:0.5;filter:alpha(opacity=30);background-color:#000;padding:10px;border:5px solid #fff;border-radius:5px}
-.psa{width:60%;margin:0 auto;text-align:left}
+.psa{width:50%;margin:0 auto;text-align:left}
 .psa a{font-size:14px;color:yellowgreen;font-weight:100}
 .psa a:hover{color:red}
 .psb{width:60%;margin:0 auto;text-align:left}
