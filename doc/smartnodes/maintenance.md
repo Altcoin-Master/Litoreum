@@ -78,7 +78,7 @@ As an example, if you have a VPS with 4 cores and want to also use it to mine, m
 
 Uptime is crucial and to make sure your Smartnode is online you should monitor it, there are a few ways to do this:
 
-1. Add a 5 minute cron job
+1. internal monitoring: Add a 5 minute cron job
 
 ```bash
 #! /bin/bash
