@@ -37,7 +37,7 @@
 							<table>
 								<tr>
 								<td><span>Total number of nodes&nbsp</span></td>
-								<td><input type="number" id="num1" value="150"><br><br></td>
+								<td><input type="number" id="num1" value="200"><br><br></td>
 								</tr>
 								<tr>
 								<td></td>
@@ -48,16 +48,20 @@
 								<td><span>Current Collateral&nbsp</span></td>
 								<td><input type="number" id="num2" value="200000"><br><br></td>
 								</tr>
-								<td><span>7 Days Profit&nbsp</span></td>
+								<td><span>7 Days APR&nbsp</span></td>
 								<td><input type="text" id="d" value="" readonly="true"><br><br></td>
 								</tr>
 								<tr>
-								<td><span>30 Days Profit&nbsp</span></td>
+								<td><span>30 Days APR&nbsp</span></td>
 								<td><input type="text" id="m" value="" readonly="true"><br><br></td>
 								</tr>
 								<tr>
-								<td><span>365 Days Profit&nbsp</span></td>
+								<td><span>365 Days APR&nbsp</span></td>
 								<td><input type="text" id="y" value="" readonly="true"><br><br></td>
+								</tr>
+								<tr>
+								<td><span>365 Days APY (Inaccurate)&nbsp</span></td>
+								<td><input type="text" id="yy" value="" readonly="true"><br><br></td>
 								</tr>
 							</table>
 							<hr class="panel-cover_divider">
@@ -100,11 +104,24 @@
 			var d = (Math.round(Dtotal/Nnodes*7/amount*100)).toFixed(1)+'%';
 			var m = (Math.round(Dtotal/Nnodes*30/amount*100)).toFixed(1)+'%';
 			var y = (Math.round(Dtotal/Nnodes*365/amount*100)).toFixed(1)+'%';
+			
+			//
+
+			var r = (Math.round(Dtotal/Nnodes*365/amount*100)).toFixed(1)/100;
+			console.log(r); 
+			var n = r;
+			var x = 1+r/n;
+			var APY = ((Math.pow(x, n)-1)*100).toFixed(1)+'%';
+			console.log(APY); 
+			//
+
 			document.getElementById("d").value=d;
 			document.getElementById("m").value=m;
 			document.getElementById("y").value=y;
+			document.getElementById("yy").value=APY;
 		  }
-	Calculate();
+		  
+		Calculate();	
 	</script>
 	</body>
 </html>
