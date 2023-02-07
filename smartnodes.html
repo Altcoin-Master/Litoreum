@@ -60,7 +60,7 @@
 								<td><input type="text" id="y" value="" readonly="true"><br><br></td>
 								</tr>
 								<tr>
-								<td><span>365 Days APY (Inaccurate)&nbsp</span></td>
+								<td><span>365 Days APY&nbsp</span></td>
 								<td><input type="text" id="yy" value="" readonly="true"><br><br></td>
 								</tr>
 							</table>
@@ -115,7 +115,7 @@
 			}
 			else
 			{
-			var n = r-1;
+			var n = r;
 			};
 			var x = 1+r/n;
 			var APY = ((Math.pow(x, n)-1)*100).toFixed(1)+'%';
