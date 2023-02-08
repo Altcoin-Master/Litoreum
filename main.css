@@ -3,6 +3,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{di
 body{line-height:1;background-image:linear-gradient(45deg,rgb(20,222,124) 0%,rgb(20,222,124) 21%,rgb(25,190,119) 21%,rgb(25,190,119) 37%,rgb(30,158,113) 37%,rgb(30,158,113) 46%,rgb(35,126,108) 46%,rgb(35,126,108) 53%,rgb(39,94,103) 53%,rgb(39,94,103) 59%,rgb(44,62,97) 59%,rgb(44,62,97) 77%,rgb(49,30,92) 77%,rgb(49,30,92) 100%);background-size:cover;background-attachment:fixed}
 ol,ul{list-style:none}
 table{margin:0px auto}
+input {width:100px;}
 a{text-decoration:none;color:#fff}
 a:hover{color:#7b0f19;-o-transition:.5s;-ms-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s}
 h1,h2,h3,h4,h5,h5{margin-top:1.0em;margin-bottom:.5em;font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;font-weight:lighter;color:#333;-webkit-font-smoothing:antialiased}
