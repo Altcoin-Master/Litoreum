@@ -49,18 +49,22 @@
 								<td><input type="number" id="num2" value="200000"><br><br></td>
 								</tr>
 								<td><span>7 Days APR&nbsp</span></td>
+								<td><input type="number" id="numd" value="200000" readonly="true"><br><br></td>
 								<td><input type="text" id="d" value="" readonly="true"><br><br></td>
 								</tr>
 								<tr>
 								<td><span>30 Days APR&nbsp</span></td>
+								<td><input type="number" id="numm" value="200000" readonly="true"><br><br></td>
 								<td><input type="text" id="m" value="" readonly="true"><br><br></td>
 								</tr>
 								<tr>
 								<td><span>365 Days APR&nbsp</span></td>
+								<td><input type="number" id="numy" value="200000" readonly="true"><br><br></td>
 								<td><input type="text" id="y" value="" readonly="true"><br><br></td>
 								</tr>
 								<tr>
 								<td><span>365 Days APY&nbsp</span></td>
+								<td><input type="number" id="numyy" value="200000" readonly="true"><br><br></td>
 								<td><input type="text" id="yy" value="" readonly="true"><br><br></td>
 								</tr>
 							</table>
@@ -101,10 +105,12 @@
 			var Dtotal = 720*1000;
 			var amount = parseFloat(document.getElementById('num2').value);
 			//var amount = 200000;
-			var d = (Math.round(Dtotal/Nnodes*7/amount*100)).toFixed(1)+'%';
-			var m = (Math.round(Dtotal/Nnodes*30/amount*100)).toFixed(1)+'%';
-			var y = (Math.round(Dtotal/Nnodes*365/amount*100)).toFixed(1)+'%';
-			
+			var d = (Math.round(Dtotal/Nnodes*7/amount*100)).toFixed(1);
+			var numd = amount*d/100;
+			var m = (Math.round(Dtotal/Nnodes*30/amount*100)).toFixed(1);
+			var numm = amount*m/100;
+			var y = (Math.round(Dtotal/Nnodes*365/amount*100)).toFixed(1);
+			var numy = amount*y/100;
 			//
 
 			var r = (Math.round(Dtotal/Nnodes*365/amount*100)).toFixed(1)/100;
@@ -119,14 +125,19 @@
 			var n = r;
 			};
 			var x = 1+r/n;
-			var APY = ((Math.pow(x, n)-1)*100).toFixed(1)+'%';
+			var APY = ((Math.pow(x, n)-1)*100).toFixed(1);
+			var numyy = amount*APY/100;
 			console.log(APY); 
 			//
 
-			document.getElementById("d").value=d;
-			document.getElementById("m").value=m;
-			document.getElementById("y").value=y;
-			document.getElementById("yy").value=APY;
+			document.getElementById("d").value=d+'%';
+			document.getElementById("numd").value=numd;
+			document.getElementById("m").value=m+'%';
+			document.getElementById("numm").value=numm;
+			document.getElementById("y").value=y+'%';
+			document.getElementById("numy").value=numy;
+			document.getElementById("yy").value=APY+'%';
+			document.getElementById("numyy").value=numyy;
 		  }
 		  
 		Calculate();	
