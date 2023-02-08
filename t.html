@@ -98,6 +98,15 @@
 				</div>
 			</div>
 		</header>
+		<!--
+      var url = 'https://explorer.litoreum.org/api/getmasternodecount';
+     fetch(url)
+     .then(response => response.json())
+     .then(data => {
+         console.log(`${data.FirstName} ${data.LastName}`)
+         return data.FirstName + ' ' + data.LastName;
+     }) 
+	 -->
     <script>
 		function Calculate(){
 
@@ -106,7 +115,8 @@ fetch('https://explorer.litoreum.org/api/getmasternodecount')
 .then(response =>{
     return response.json();
 }).then(json=>{
-    console.log(json)
+    console.log(json);
+	console.log(json.enabled)
 })
 
 			var Nnodes = parseFloat(document.getElementById('num1').value);
