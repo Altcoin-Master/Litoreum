@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[litoreum.qt-translation-012x]
+file_filter = src/qt/locale/litoreum_<lang>.ts
+source_file = src/qt/locale/litoreum_en.ts
+source_lang = en
