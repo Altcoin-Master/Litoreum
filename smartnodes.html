@@ -49,6 +49,10 @@
 								<td><span>Current Collateral&nbsp</span></td>
 								<td><input type="number" id="num2" value="200000"><br><br></td>
 								</tr>
+								<tr>
+								<td><span>Current Rewards&nbsp</span></td>
+								<td><input type="number" id="num3" value="1000"><br><br></td>
+								</tr>
 								<td><span>7 Days APR&nbsp</span></td>
 								<td><input type="number" id="numd" value="200000" readonly="true"><br><br></td>
 								<td><input type="text" id="d" value="" readonly="true"><br><br></td>
@@ -103,9 +107,11 @@
 		function Calculate(){
 			var Nnodes = parseFloat(document.getElementById('num1').value);
 			//var Nnodes = 200;
-			var Dtotal = 720*1000;
 			var amount = parseFloat(document.getElementById('num2').value);
 			//var amount = 200000;
+			var Nrewards = parseFloat(document.getElementById('num3').value);//Number of rewards
+			var Dtotal = 720*Nrewards;
+			//var Dtotal = 720*1000;
 			var d = (Math.round(Dtotal/Nnodes*7/amount*100)).toFixed(1);
 			var numd = amount*d/100;
 			var m = (Math.round(Dtotal/Nnodes*30/amount*100)).toFixed(1);
