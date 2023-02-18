@@ -1,6 +1,0 @@
-usr/local/bin/litoreum-qt usr/bin
-share/pixmaps/litoreum32.xpm usr/share/pixmaps
-share/pixmaps/litoreum16.xpm usr/share/pixmaps
-share/pixmaps/litoreum128.png usr/share/pixmaps
-debian/litoreum-qt.desktop usr/share/applications
-debian/litoreum-qt.protocol usr/share/kde4/services/
