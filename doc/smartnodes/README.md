@@ -67,7 +67,7 @@ apt install ufw -y
 ufw default deny incoming
 ufw default allow outgoing
 ufw allow ssh
-ufw allow 21002/tcp
+ufw allow 21001/tcp
 ufw enable
 ```
 
@@ -167,7 +167,7 @@ The private key only allows you to restore the matching receiving address. If yo
 Here is an example protx quick_setup command:
 
 ```bash
-protx quick_setup "c4bbcde9771668fa640c263d4b964f688b0f039f7b684e715d92e4012369fea6" "1" "127.0.0.1:21002" "BFbWv94ZfueciwVVpHLMdqFayaXAS4sBxP"
+protx quick_setup "c4bbcde9771668fa640c263d4b964f688b0f039f7b684e715d92e4012369fea6" "1" "127.0.0.1:21001" "BFbWv94ZfueciwVVpHLMdqFayaXAS4sBxP"
 ```
 
 The structure from left to right is:
