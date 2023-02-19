@@ -67,7 +67,7 @@ apt install ufw -y
 ufw default deny incoming
 ufw default allow outgoing
 ufw allow ssh
-ufw allow 21001/tcp
+ufw allow 21002/tcp
 ufw enable
 ```
 
@@ -109,11 +109,11 @@ Get Litoreum wallet / daemon and bootstrap:
 ```bash
 mkdir -p ltrm_latest
 cd ltrm_latest
-wget https://github.com/Altcoin-Master/Litoreum/releases/download/v1.1.0.0/litoreum-linux-1.1.0.0.zip
-unzip litoreum-linux-1.1.0.0.zip
+wget https://github.com/Altcoin-Master/Litoreum/releases/download/v1.1.0.0/litoreum-ubuntu20-1.2.0.0.zip
+unzip litoreum-ubuntu20-1.2.0.0.zip
 mkdir ~/.litoreumcore && touch ~/.litoreumcore/litoreum.conf
 echo "daemon=1" >> ~/.litoreumcore/litoreum.conf
-~/ltrm_latest/litoreum-linux-1.1.0.0/./litoreumd
+~/ltrm_latest/litoreum-ubuntu20-1.2.0.0/./litoreumd
 echo all done!
 ```
 
@@ -148,8 +148,7 @@ dumpprivkey "address" (address is the receiving address you sent the 100k LTRM t
 - Wait for 2 confirmations
 - Smartnodes rules:
 ```
-        0 - 20000     100,000 LTRM
-    20001 - 100000    200,000 LTRM
+        0 - 100000    200,000 LTRM
    100001 - 200000    400,000 LTRM
    200001 - 300000    600,000 LTRM
    300001 - 400000    800,000 LTRM
@@ -167,7 +166,7 @@ The private key only allows you to restore the matching receiving address. If yo
 Here is an example protx quick_setup command:
 
 ```bash
-protx quick_setup "c4bbcde9771668fa640c263d4b964f688b0f039f7b684e715d92e4012369fea6" "1" "127.0.0.1:21001" "LFbWv94ZfueciwVVpHLMdqFayaXAS4sBxP"
+protx quick_setup "c4bbcde9771668fa640c263d4b964f688b0f039f7b684e715d92e4012369fea6" "1" "127.0.0.1:21002" "BFbWv94ZfueciwVVpHLMdqFayaXAS4sBxP"
 ```
 
 The structure from left to right is:
