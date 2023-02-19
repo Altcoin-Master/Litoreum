@@ -98,7 +98,8 @@ fi
 As the litoreum network matures Smartnode collateral ramps up and you will need to recreate your Smartnode in order to increase the collateral amount. 
 - Smartnodes rules:
 ```
-        0 - 100000    200,000 LTRM
+        0 - 20000     100,000 LTRM
+    20001 - 100000    200,000 LTRM
    100001 - 200000    400,000 LTRM
    200001 - 300000    600,000 LTRM
    300001 - 400000    800,000 LTRM
