@@ -214,3 +214,6 @@ When this is done, wait a couple minutes until running `~/./litoreum-cli smartno
 :::success Success!
 Your Smartnode should now be running!
 :::
+
+## View node status in QT wallet
+Settings - Options - Wallet - Show Smartnode Tab
