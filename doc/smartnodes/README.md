@@ -107,13 +107,13 @@ adduser <username_here>
 Get Litoreum wallet / daemon and bootstrap:
 
 ```bash
-mkdir -p ltrm_latest
-cd ltrm_latest
+mkdir -p latest
+cd latest
 wget https://github.com/Altcoin-Master/Litoreum/releases/download/v1.2.0.0/litoreum-ubuntu20-1.2.0.0.zip
 unzip litoreum-ubuntu20-1.2.0.0.zip
 mkdir ~/.litoreumcore && touch ~/.litoreumcore/litoreum.conf
 echo "daemon=1" >> ~/.litoreumcore/litoreum.conf
-~/ltrm_latest/litoreum-ubuntu20-1.2.0.0/./litoreumd
+~/latest/litoreum-ubuntu20-1.2.0.0/./litoreumd
 echo all done!
 ```
 
