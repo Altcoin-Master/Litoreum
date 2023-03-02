@@ -1182,6 +1182,43 @@ NOTE:   unlike bitcoin we are using PREVIOUS block height here,
         might be a good idea to change this to use prev bits
         but current height to avoid confusion.
 */
+int TaiChiHashPS(int lookup, int height) {
+    CBlockIndex *pb = chainActive.Tip();
+
+    if (height >= 0 && height < chainActive.Height())
+        pb = chainActive[height];
+
+    if (pb == nullptr || !pb->nHeight)
+        return 0;
+
+    // If lookup is -1, then use blocks since last difficulty change.
+    if (lookup <= 0)
+        lookup = pb->nHeight % Params().GetConsensus().DifficultyAdjustmentInterval() + 1;
+
+    // If lookup is larger than chain, then set it to chain length.
+    if (lookup > pb->nHeight)
+        lookup = pb->nHeight;
+
+    CBlockIndex *pb0 = pb;
+    int64_t minTime = pb0->GetBlockTime();
+    int64_t maxTime = minTime;
+    for (int i = 0; i < lookup; i++) {
+        pb0 = pb0->pprev;
+        int64_t time = pb0->GetBlockTime();
+        minTime = std::min(time, minTime);
+        maxTime = std::max(time, maxTime);
+    }
+
+    // In case there's a situation where minTime == maxTime, we don't want a divide by zero exception.
+    if (minTime == maxTime)
+        return 0;
+
+    arith_uint256 workDiff = pb->nChainWork - pb0->nChainWork;
+    int64_t timeDiff = maxTime - minTime;
+
+    //return workDiff.getdouble() / timeDiff;
+    return workDiff.getdouble() / timeDiff / 1000; 
+}
 CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
     // if (Params().NetworkIDString() == "main") {
@@ -1192,7 +1229,73 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
     const short owlings = 21262; // amount of blocks between 2 owlings
     int multiplier;              // integer number of owlings
     int tempHeight;              // number of blocks since last anchor
-    if (nPrevHeight < 720) {
+	int TaiChi = TaiChiHashPS(120, nPrevHeight - 1);
+	
+    if (nPrevHeight < 720) 
+	{
+        nSubsidy = 4;
+	}
+	else if ((nPrevHeight > 100000) && (nPrevHeight <= 200000)) 
+	{
+		if (TaiChi < 4000)
+		{
+			nSubsidy = 4000;
+		}
+		else
+		{
+			nSubsidy = TaiChi + 1;
+		}
+	}
+	else if ((nPrevHeight > 200000) && (nPrevHeight <= 300000)) 
+	{
+		if (TaiChi < 3000)
+		{
+			nSubsidy = 3000;
+		}
+		else
+		{
+			nSubsidy = TaiChi + 1;
+		}
+	}
+	else if ((nPrevHeight > 300000) && (nPrevHeight <= 400000)) 
+	{
+		if (TaiChi < 2000)
+		{
+			nSubsidy = 2000;
+		}
+		else
+		{
+			nSubsidy = TaiChi + 1;
+		}
+	}
+	else if ((nPrevHeight > 400000) && (nPrevHeight <= 500000)) 
+	{
+		if (TaiChi < 1000)
+		{
+			nSubsidy = 1000;
+		}
+		else
+		{
+			nSubsidy = TaiChi + 1;
+		}
+	}
+	else if (nPrevHeight > 500000)
+	{
+		if (TaiChi > 100000)
+		{
+			nSubsidy = 100000;
+		}
+		else
+		{
+			nSubsidy = TaiChi + 1;
+		}
+	}
+	
+    return nSubsidy * COIN;
+}
+
+
+/*     if (nPrevHeight < 720) {
         nSubsidy = 4;
     } else if ((nPrevHeight > 553531) && (nPrevHeight < 2105657)) {
         tempHeight = nPrevHeight - 553532;
@@ -1222,7 +1325,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         nSubsidy = 0.001;
     }
     return nSubsidy * COIN;
-}
+} */
 
 CAmount GetSmartnodePayment(int nHeight, CAmount blockValue, CAmount specialTxFees)
 {

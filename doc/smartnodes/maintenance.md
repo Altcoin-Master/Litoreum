@@ -164,7 +164,7 @@ nano ~/.litoreumcore/litoreum.conf
 Swap out the old bls private key with the new, exit, and start litoreumd:
 
 ```bash
-./litoreumd
+./litoreumd -daemon
 ```
 
 Give it 5 minutes to catch up on any missed blocks.

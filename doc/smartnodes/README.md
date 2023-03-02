@@ -109,11 +109,12 @@ Get Litoreum wallet / daemon and bootstrap:
 ```bash
 mkdir -p latest
 cd latest
-wget https://github.com/Altcoin-Master/Litoreum/releases/download/v1.2.0.0/litoreum-ubuntu20-1.2.0.0.zip
-unzip litoreum-ubuntu20-1.2.0.0.zip
+# Replace the following <version> numbers with the latest
+wget https://github.com/Altcoin-Master/Litoreum/releases/download/v<version>/litoreum-<version>.zip
+unzip litoreum-<version>.zip
 mkdir ~/.litoreumcore && touch ~/.litoreumcore/litoreum.conf
 echo "daemon=1" >> ~/.litoreumcore/litoreum.conf
-~/latest/litoreum-ubuntu20-1.2.0.0/./litoreumd
+~/latest/litoreum-<version>/./litoreumd -daemon
 echo all done!
 ```
 
@@ -167,7 +168,7 @@ The private key only allows you to restore the matching receiving address. If yo
 Here is an example protx quick_setup command:
 
 ```bash
-protx quick_setup "c4bbcde9771668fa640c263d4b964f688b0f039f7b684e715d92e4012369fea6" "1" "127.0.0.1:21001" "BFbWv94ZfueciwVVpHLMdqFayaXAS4sBxP"
+protx quick_setup "c4bbcde9771668fa640c263d4b964f688b0f039f7b684e715d92e4012369fea6" "1" "127.0.0.1:21001" "LFbWv94ZfueciwVVpHLMdqFayaXAS4sBxP"
 ```
 
 The structure from left to right is:
@@ -206,7 +207,7 @@ Paste in what you copied from the .conf file made during the protx command, save
 When done with this, run litoreumd from the terminal:
 
 ```bash
-~/./litoreumd
+~/./litoreumd -daemon
 ```
 
 When this is done, wait a couple minutes until running `~/./litoreum-cli smartnode status` to check the status of your smartnode. This should return: `Ready Ready`
