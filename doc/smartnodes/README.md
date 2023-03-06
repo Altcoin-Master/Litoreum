@@ -108,11 +108,13 @@ Get Litoreum wallet / daemon and bootstrap:
 
 ```bash
 mkdir -p latest
-sudo chmod -R 755 latest
 cd latest
 # Replace the following <version> numbers with the latest
 wget https://github.com/Altcoin-Master/Litoreum/releases/download/v<version>/litoreum-<version>.zip
 unzip litoreum-<version>.zip
+cd ..
+chmod -R 755 latest
+cd latest
 mkdir ~/.litoreumcore && touch ~/.litoreumcore/litoreum.conf
 echo "daemon=1" >> ~/.litoreumcore/litoreum.conf
 ~/latest/litoreum-<version>/./litoreumd -daemon
